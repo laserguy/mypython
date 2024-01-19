@@ -15,7 +15,7 @@ jobs:
         
     strategy:
       matrix:
-        python-version: [3.6, 3.7, 3.8]
+        python-version: [3.7, 3.8, 3.9]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,7 +31,7 @@ jobs:
        
       # Install all the app dependencies
       - name: Install dependencies
-        run: pip install -r requirements.txt --use-feature=2020-resolver
+        run: pip install -r requirements.txt
         
       # Build the app and run tests
       - name: Run Test
